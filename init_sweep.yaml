@@ -1,0 +1,28 @@
+program: MOT_main.py
+method: grid
+metric:
+  goal: maximize
+  name: epoch_loss
+parameters:
+  nemot_lr:
+    values: [0.0005]
+  batch_size:
+    values: [64]
+  epochs:
+    values: [20,40,60]
+  eps:
+    values: [0.01, 0.1, 1.0]
+  using_wandb:
+    values: [1]
+  levels:
+    values: ['4','43','34','432','234']
+  barycenter_weights:
+    values: ['uniform','only_0','only_1']
+  wandb_project_name:
+    values: ["init_barycenter_run"]
+  noise_barycenter:
+    values: [0,1]
+
+
+
+
